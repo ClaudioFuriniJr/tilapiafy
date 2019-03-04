@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/tilapiafy.svg)
 
-Generates pictures of tilapias.
+Generates a tilapia.
 
 ## Install
 
@@ -13,13 +13,18 @@ $ npm install tilapiafy
 ## Usage
 
 ```js
-const tilapia = require("tilapiafy");
+import React from 'react';
+import Tilapia from 'tilapiafy';
 
-tilapia("So much space!");
-//=> "Somuchspace!"
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+          <Tilapia />
+      </div>
+    );
+  }
+}
 
-tilapia(1337);
-//=> Uncaught TypeError: Tiny wants a string!
-//    at tiny (<anonymous>:2:41)
-//    at <anonymous>:1:1
+export default App;
 ```
